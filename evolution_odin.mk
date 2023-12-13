@@ -3,8 +3,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
-# Inherit some common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common EvoX stuff
+$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
+EVO_BUILD_TYPE := UNOFFICIAL
 
 # Boot animation
 TARGET_BOOT_ANIMATION_RES := 1080
@@ -15,7 +16,7 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := odin
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_NAME := lineage_odin
+PRODUCT_NAME := evolution_odin
 PRODUCT_MODEL := M2102K1G
 PRODUCT_SHIPPING_API_LEVEL := 30
 
@@ -26,3 +27,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRIVATE_BUILD_DESC="missi-user 13 TKQ1.220829.00
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
 BUILD_FINGERPRINT := Xiaomi/odin/odin:13/TKQ1.220829.002/V14.0.3.0.TKMCNXM:user/release-keys
+
+# Quick Tap
+TARGET_SUPPORTS_QUICK_TAP := true
