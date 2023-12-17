@@ -5,7 +5,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 # Inherit some common EvoX stuff
 $(call inherit-product, vendor/evolution/config/common_full_phone.mk)
-EVO_BUILD_TYPE := UNOFFICIAL
+EVO_BUILD_TYPE := COMMUNITY
 
 # Boot animation
 TARGET_BOOT_ANIMATION_RES := 1080
@@ -30,3 +30,6 @@ BUILD_FINGERPRINT := Xiaomi/odin/odin:13/TKQ1.220829.002/V14.0.3.0.TKMCNXM:user/
 
 # Quick Tap
 TARGET_SUPPORTS_QUICK_TAP := true
+
+# For less system partition reservation
+WITH_GMS := true
