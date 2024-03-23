@@ -33,3 +33,7 @@ TARGET_SUPPORTS_QUICK_TAP := true
 
 # For less system partition reservation
 WITH_GMS := true
+
+
+# Include UDFPS Animations
+EXTRA_UDFPS_ANIMATIONS := true
