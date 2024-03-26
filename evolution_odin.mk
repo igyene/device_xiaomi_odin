@@ -5,7 +5,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 # Inherit some common EvoX stuff
 $(call inherit-product, vendor/evolution/config/common_full_phone.mk)
-EVO_BUILD_TYPE := COMMUNITY
+EVO_BUILD_TYPE := UNOFFICIAL
 
 # Boot animation
 TARGET_BOOT_ANIMATION_RES := 1080
