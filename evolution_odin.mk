@@ -5,10 +5,17 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 # Inherit some common EvoX stuff
 $(call inherit-product, vendor/evolution/config/common_full_phone.mk)
+
 EVO_BUILD_TYPE := UNOFFICIAL
 
 # Boot animation
 TARGET_BOOT_ANIMATION_RES := 1080
+
+# Quick Tap
+TARGET_SUPPORTS_QUICK_TAP := true
+
+# Include UDFPS Animations
+EXTRA_UDFPS_ANIMATIONS := true
 
 # Inherit from odin device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
@@ -27,13 +34,3 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRIVATE_BUILD_DESC="missi-user 13 TKQ1.220829.00
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
 BUILD_FINGERPRINT := Xiaomi/odin/odin:13/TKQ1.220829.002/V14.0.8.0.TKMCNXM:user/release-keys
-
-# Quick Tap
-TARGET_SUPPORTS_QUICK_TAP := true
-
-# For less system partition reservation
-WITH_GMS := true
-
-
-# Include UDFPS Animations
-EXTRA_UDFPS_ANIMATIONS := true
