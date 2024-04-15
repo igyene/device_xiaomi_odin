@@ -3,10 +3,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
-# Inherit some common EvoX stuff
-$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
-
-EVO_BUILD_TYPE := UNOFFICIAL
+# Inherit some common PixelOS stuff
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Boot animation
 TARGET_BOOT_ANIMATION_RES := 1080
@@ -14,16 +12,13 @@ TARGET_BOOT_ANIMATION_RES := 1080
 # Quick Tap
 TARGET_SUPPORTS_QUICK_TAP := true
 
-# Include UDFPS Animations
-EXTRA_UDFPS_ANIMATIONS := true
-
 # Inherit from odin device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := odin
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_NAME := evolution_odin
+PRODUCT_NAME := aosp_odin
 PRODUCT_MODEL := M2102K1G
 PRODUCT_SHIPPING_API_LEVEL := 30
 
