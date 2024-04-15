@@ -111,6 +111,18 @@ class XiaomiUdfpsHander : public UdfpsHandler {
         set(FOD_HBM_PATH, FOD_HBM_OFF);
     }
 
+    virtual void preEnroll() {
+        // nothing
+    }
+
+    virtual void enroll() {
+        // nothing
+    }
+
+    virtual void postEnroll() {
+        // nothing
+    }
+
   private:
     fingerprint_device_t* mDevice;
 };
